@@ -1,0 +1,53 @@
+{% extends 'store/main.html' %}
+{% load static %}
+
+{% block content %}
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/details.css' %}">
+	    <link rel="stylesheet" type="text/css" href="{% static 'css/all.min.css' %}">
+    </head>
+
+    
+
+
+    <div class="containar">
+        <div class="box">
+            <div class="images">
+                <div class="img-holder active">
+                    <img src="{{product.imageURL}}" alt="">
+                </div>
+                <div class="img-holder">
+                    <img src="{{product.imageURL}}" alt="">
+                </div>
+                <div class="img-holder">
+                    <img src="{{product.imageURL}}" alt="">
+                </div>
+                <div class="img-holder">
+                    <img src="{{product.imageURL}}" alt="">
+                </div>
+            </div>
+            <div class="basic-info">
+                <h1>{{product.name}}</h1>
+                <div class="rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <span>{{product.price}} XAF</span>
+                <div class="options">
+                    <button data-product="{{product.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="description">
+                <p>
+                    {{product.description}}
+                </p>
+               
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
